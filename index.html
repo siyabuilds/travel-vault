@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Vault - Discover Your Perfect Destination</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>Travel Vault</span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover Your Next Adventure</h1>
+        <p>
+          Explore the world's most beautiful destinations with personalized
+          recommendations tailored just for you.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search for beaches, temples, or cities like 'Tokyo, Japan'"
+            />
+            <button onclick="searchDestinations()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div class="search-suggestions">
+            <span onclick="searchFor('beaches')">Beaches</span>
+            <span onclick="searchFor('temples')">Temples</span>
+            <span onclick="searchFor('cities')">Cities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="resultsSection" style="display: none">
+      <div class="container">
+        <h2 id="resultsTitle">Search Results</h2>
+        <div id="currentTime" class="current-time"></div>
+        <div class="results-grid" id="resultsGrid">
+          <!-- Results will be populated here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="featured-section">
+      <div class="container">
+        <h2>Featured Destinations</h2>
+        <div class="category-tabs">
+          <button class="tab-btn active" onclick="showCategory('beaches')">
+            Beaches
+          </button>
+          <button class="tab-btn" onclick="showCategory('temples')">
+            Temples
+          </button>
+          <button class="tab-btn" onclick="showCategory('cities')">
+            Cities
+          </button>
+        </div>
+        <div class="featured-grid" id="featuredGrid">
+          <!-- Featured destinations will be populated here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3><i class="fas fa-map-marked-alt"></i> Travel Vault</h3>
+            <p>
+              Your gateway to discovering the world's most beautiful
+              destinations.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Travel Vault. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
